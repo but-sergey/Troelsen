@@ -27,16 +27,15 @@ namespace CarEvents
         {
             if (carIsDead)
             {
-                if (Exploded != null)
-                    Exploded("Sorry, this car is dead...");
+                Exploded?.Invoke("Sorry, this car is dead...");
             }
             else
             {
                 CurrentSpeed += delta;
 
-                if (10 == (MaxSpeed - CurrentSpeed) && AboutToBlow != null)
+                if (10 == (MaxSpeed - CurrentSpeed))
                 {
-                    AboutToBlow("Careful buddy! Gonna blow!");
+                    AboutToBlow?.Invoke("Careful buddy! Gonna blow!");
                 }
                 if (CurrentSpeed >= MaxSpeed)
                     carIsDead = true;
