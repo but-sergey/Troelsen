@@ -14,21 +14,22 @@ namespace CarEvents
 
             Car c1 = new Car("SlugBug", 100, 10);
 
-            c1.AboutToBlow += new Car.CarEngineHandler(CarIsAlmostDoomed);
-            c1.AboutToBlow += new Car.CarEngineHandler(CarAboutToBlow);
+            c1.AboutToBlow += CarIsAlmostDoomed;
+            c1.AboutToBlow += CarAboutToBlow;
 
-            Car.CarEngineHandler d = new Car.CarEngineHandler(CarExploded);
-            c1.Exploded += d;
+            c1.Exploded += CarExploded;
 
             Console.WriteLine("***** Speeding up *****");
             for (int i = 0; i < 6; i++)
                 c1.Accelerate(20);
 
-            c1.Exploded -= d;
+            c1.Exploded -= CarExploded;
 
             Console.WriteLine("\n***** Speeding up *****");
             for (int i = 0; i < 6; i++)
                 c1.Accelerate(20);
+
+            Console.ReadLine();
         }
 
         public static void CarAboutToBlow(string msg)
