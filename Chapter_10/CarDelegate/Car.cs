@@ -22,7 +22,7 @@ namespace CarDelegate
         private CarEngineHandler listOfHandlers;
         public void RegisterWithCarEngine(CarEngineHandler methodToCall)
         {
-            listOfHandlers = methodToCall;
+            listOfHandlers += methodToCall;
         }
 
         public void Accelerate(int delta)
