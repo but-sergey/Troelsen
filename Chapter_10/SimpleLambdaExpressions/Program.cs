@@ -8,7 +8,7 @@ namespace SimpleLambdaExpressions
         static void Main(string[] args)
         {
             Console.WriteLine("***** Fun with Lambdas *****\n");
-            AnonimousMethodSyntax();
+            LambdaExpressionSyntax();
             Console.ReadLine();
         }
 
@@ -35,6 +35,21 @@ namespace SimpleLambdaExpressions
 
             List<int> evenNumbers = list.FindAll(delegate (int i)
             { return (i % 2) == 0; });
+
+            Console.WriteLine("Here are you even numbers:");
+            foreach (int evenNumber in evenNumbers)
+            {
+                Console.Write($"{evenNumber}\t");
+            }
+            Console.WriteLine();
+        }
+
+        static void LambdaExpressionSyntax()
+        {
+            List<int> list = new List<int>();
+            list.AddRange(new int[] { 20, 1, 4, 8, 9, 44 });
+
+            List<int> evenNumbers = list.FindAll(i => (i % 2) == 0);
 
             Console.WriteLine("Here are you even numbers:");
             foreach (int evenNumber in evenNumbers)
