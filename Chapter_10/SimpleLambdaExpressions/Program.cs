@@ -49,7 +49,12 @@ namespace SimpleLambdaExpressions
             List<int> list = new List<int>();
             list.AddRange(new int[] { 20, 1, 4, 8, 9, 44 });
 
-            List<int> evenNumbers = list.FindAll(i => (i % 2) == 0);
+            List<int> evenNumbers = list.FindAll((i) =>
+            {
+                Console.WriteLine($"value of i is currently: {i}");
+                bool isEven = ((i % 2) == 0);
+                return isEven;
+            });
 
             Console.WriteLine("Here are you even numbers:");
             foreach (int evenNumber in evenNumbers)
