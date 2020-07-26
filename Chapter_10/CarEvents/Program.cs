@@ -32,19 +32,19 @@ namespace CarEvents
             Console.ReadLine();
         }
 
-        public static void CarAboutToBlow(string msg)
+        public static void CarAboutToBlow(object sender, CarEventArgs e)
         {
-            Console.WriteLine(msg);
+            Console.WriteLine($"{sender} says: {e.msg}");
         }
 
-        public static void CarIsAlmostDoomed(string msg)
+        public static void CarIsAlmostDoomed(object sender, CarEventArgs e)
         {
-            Console.WriteLine($"=> Critical Message form Car: {msg}");
+            Console.WriteLine($"=> Critical Message form {sender}: {e.msg}");
         }
 
-        public static void CarExploded(string msg)
+        public static void CarExploded(object sender, CarEventArgs e)
         {
-            Console.WriteLine(msg);
+            Console.WriteLine($"{sender} - {e.msg}");
         }
     }
 }

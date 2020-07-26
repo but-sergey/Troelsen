@@ -4,7 +4,7 @@ namespace CarEvents
 {
     public class Car
     {
-        public delegate void CarEngineHandler(string msg);
+        public delegate void CarEngineHandler(object sender, CarEventArgs e);
 
         public event CarEngineHandler Exploded;
         public event CarEngineHandler AboutToBlow;
@@ -27,7 +27,7 @@ namespace CarEvents
         {
             if (carIsDead)
             {
-                Exploded?.Invoke("Sorry, this car is dead...");
+                Exploded?.Invoke(this, new CarEventArgs("Sorry, this car is dead..."));
             }
             else
             {
@@ -35,7 +35,7 @@ namespace CarEvents
 
                 if (10 == (MaxSpeed - CurrentSpeed))
                 {
-                    AboutToBlow?.Invoke("Careful buddy! Gonna blow!");
+                    AboutToBlow?.Invoke(this, new CarEventArgs("Careful buddy! Gonna blow!"));
                 }
                 if (CurrentSpeed >= MaxSpeed)
                     carIsDead = true;
