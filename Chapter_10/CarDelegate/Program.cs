@@ -11,11 +11,19 @@ namespace CarDelegate
             Car c1 = new Car("SlugBug", 100, 10);
 
             c1.RegisterWithCarEngine(new Car.CarEngineHandler(OnCarEngineEvent));
-            c1.RegisterWithCarEngine(new Car.CarEngineHandler(OnCarEngineEvent2));
+
+            Car.CarEngineHandler handler2 = new Car.CarEngineHandler(OnCarEngineEvent2);
+            c1.RegisterWithCarEngine(handler2);
 
             Console.WriteLine("\n***** Speeding up *****");
             for (int i = 0; i < 6; i++)
                 c1.Accelerate(20);
+
+            c1.UnRegisterWithCarEngine(handler2);
+
+            for (int i = 0; i < 6; i++)
+                c1.Accelerate(20);
+
             Console.ReadLine();
         }
 
