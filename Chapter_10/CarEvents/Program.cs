@@ -34,7 +34,11 @@ namespace CarEvents
 
         public static void CarAboutToBlow(object sender, CarEventArgs e)
         {
-            Console.WriteLine($"{sender} says: {e.msg}");
+            if(sender is Car c)
+            {
+                //Car c = (Car)sender;
+                Console.WriteLine($"{c.PetName} says: {e.msg}");
+            }
         }
 
         public static void CarIsAlmostDoomed(object sender, CarEventArgs e)
