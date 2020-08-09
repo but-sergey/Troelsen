@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-SimpleIndexer", "01-Simp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomConversions", "CustomConversions\CustomConversions.csproj", "{9AE6B160-DC13-4358-AF42-647D4D3EA312}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensionMethods", "ExtensionMethods\ExtensionMethods.csproj", "{50ED11EB-63C3-4F4E-BD27-DE6571851024}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceExtensions", "InterfaceExtensions\InterfaceExtensions.csproj", "{44574C34-33DF-452A-B9F3-3B4A73D42264}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{9AE6B160-DC13-4358-AF42-647D4D3EA312}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9AE6B160-DC13-4358-AF42-647D4D3EA312}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9AE6B160-DC13-4358-AF42-647D4D3EA312}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50ED11EB-63C3-4F4E-BD27-DE6571851024}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50ED11EB-63C3-4F4E-BD27-DE6571851024}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50ED11EB-63C3-4F4E-BD27-DE6571851024}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50ED11EB-63C3-4F4E-BD27-DE6571851024}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44574C34-33DF-452A-B9F3-3B4A73D42264}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44574C34-33DF-452A-B9F3-3B4A73D42264}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44574C34-33DF-452A-B9F3-3B4A73D42264}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44574C34-33DF-452A-B9F3-3B4A73D42264}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
